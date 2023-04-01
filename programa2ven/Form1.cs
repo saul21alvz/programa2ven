@@ -130,7 +130,7 @@ namespace programa2ven
 
         private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar >= 47 && e.KeyChar <= 58)
+            if (e.KeyChar >= 47 && e.KeyChar <= 58 )
             {
                 e.Handled = true;
                 MessageBox.Show("Solo letras");

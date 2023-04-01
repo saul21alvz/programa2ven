@@ -13,6 +13,7 @@ namespace programa2ven
 {
     public partial class Productos : Form
     {
+        StreamWriter fichero;
         public Productos()
         {
             InitializeComponent();
@@ -46,6 +47,46 @@ namespace programa2ven
             {
                 MessageBox.Show("La carpeta ya existe");
             }
+            string np = txtproducto.Text;
+            string pp = txtprecio.Text;
+            if (File.Exists("producto.txt"))
+            {
+                
+                if (String.IsNullOrEmpty(np)|| String.IsNullOrEmpty(pp))
+                {
+                    MessageBox.Show("Faltan datos");
+                }
+                else
+                {
+                    
+                    fichero = File.AppendText("producto.txt");
+                    fichero.WriteLine(txtproducto.Text + "@" + txtprecio + "@" + ruta);
+                    fichero.Close();
+                }
+            }
+            else
+            {
+                if (String.IsNullOrEmpty(np) || String.IsNullOrEmpty(pp))
+                {
+                    MessageBox.Show("Faltan datos");
+                }
+                else
+                {
+                    fichero = File.AppendText("producto.txt");
+                    fichero.WriteLine(txtproducto.Text + "@" + txtprecio + "@" + ruta);
+                    fichero.Close();
+                }
+            }
+        }
+
+        private void pbfoto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

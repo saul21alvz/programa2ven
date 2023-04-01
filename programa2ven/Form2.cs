@@ -186,5 +186,10 @@ namespace programa2ven
             Productos p = new Productos();
             p.ShowDialog();
         }
+
+        private void btnAgregarDash_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

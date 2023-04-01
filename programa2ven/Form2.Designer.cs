@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RegistroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,6 +61,7 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.img3 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -86,7 +88,7 @@
             this.configuracionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(646, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(646, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -138,9 +140,9 @@
             // 
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(646, 417);
+            this.panel1.Size = new System.Drawing.Size(646, 419);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -158,7 +160,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(646, 417);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(646, 419);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel2
@@ -168,7 +170,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(317, 202);
+            this.panel2.Size = new System.Drawing.Size(317, 203);
             this.panel2.TabIndex = 0;
             // 
             // panel4
@@ -177,7 +179,7 @@
             this.panel4.Controls.Add(this.lblUsuarioDash);
             this.panel4.Controls.Add(this.Usuarios);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 102);
+            this.panel4.Location = new System.Drawing.Point(0, 103);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(317, 100);
             this.panel4.TabIndex = 1;
@@ -192,6 +194,7 @@
             this.btnAgregarDash.TabIndex = 2;
             this.btnAgregarDash.Text = "Agregar";
             this.btnAgregarDash.UseVisualStyleBackColor = true;
+            this.btnAgregarDash.Click += new System.EventHandler(this.btnAgregarDash_Click);
             // 
             // lblUsuarioDash
             // 
@@ -243,7 +246,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(326, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(317, 202);
+            this.panel5.Size = new System.Drawing.Size(317, 203);
             this.panel5.TabIndex = 1;
             // 
             // panel7
@@ -252,7 +255,7 @@
             this.panel7.Controls.Add(this.lblPersonalDash);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel7.Location = new System.Drawing.Point(0, 102);
+            this.panel7.Location = new System.Drawing.Point(0, 103);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(317, 100);
             this.panel7.TabIndex = 1;
@@ -315,9 +318,9 @@
             this.panel8.Controls.Add(this.panel11);
             this.panel8.Controls.Add(this.panel10);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(3, 211);
+            this.panel8.Location = new System.Drawing.Point(3, 212);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(317, 203);
+            this.panel8.Size = new System.Drawing.Size(317, 204);
             this.panel8.TabIndex = 2;
             // 
             // panel11
@@ -326,7 +329,7 @@
             this.panel11.Controls.Add(this.btnproductosDash);
             this.panel11.Controls.Add(this.label1);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(0, 103);
+            this.panel11.Location = new System.Drawing.Point(0, 104);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(317, 100);
             this.panel11.TabIndex = 1;
@@ -397,10 +400,16 @@
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(326, 211);
+            this.panel9.Location = new System.Drawing.Point(326, 212);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(317, 203);
+            this.panel9.Size = new System.Drawing.Size(317, 204);
             this.panel9.TabIndex = 3;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 32);
             // 
             // Form2
             // 
@@ -471,5 +480,6 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.PictureBox img3;
         private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
